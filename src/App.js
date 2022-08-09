@@ -47,7 +47,7 @@ function App() {
   const [year, setYear] = useState(date.getFullYear());
   const [showModal, setShowModal] = useState(false);
   const [showDelete, setShowDelete] = useState(false);
-  const [cellValue, setCellValue] = useState("s");
+  const [cellValue, setCellValue] = useState("");
   const [selectedTd, setSelectedTd] = useState(null);
 
   useEffect(() => {
@@ -119,6 +119,7 @@ function App() {
     } else {
       alert("Please,select a time in the table");
     }
+    setCellValue("");
     setShowModal(false);
   };
   const deleteContent = () => {
